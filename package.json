@@ -1,0 +1,45 @@
+{
+  "name": "loggerage-promisify",
+  "version": "0.1.0",
+  "description": "loggerage-promisify is a helper for promisify methods of loggerage package",
+  "main": "./build/index.js",
+  "author": "lmfresneda <loggerage@gmail.com>",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register",
+    "dev": "babel index.es6 -w -d build -s inline",
+    "build": "babel index.es6 -d build -s inline",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec",
+    "report-coverage": "cat ./coverage/lcov.info | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lmfresneda/loggerage-promisify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lmfresneda/loggerage-promisify/issues"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/lmfresneda/loggerage-promisify",
+  "keywords": [
+    "promisify",
+    "promise",
+    "loggerage",
+    "log",
+    "logger",
+    "storage"
+  ],
+  "dependencies": {
+    "promise": "^8.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-preset-env": "^1.6.0",
+    "coveralls": "^2.13.1",
+    "expect.js": "^0.3.1",
+    "istanbul": "^0.4.5",
+    "localStorage": "^1.0.3",
+    "loggerage": "^2.3.1",
+    "mocha": "^3.5.0"
+  }
+}
